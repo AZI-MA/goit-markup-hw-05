@@ -36,10 +36,6 @@ body {
   list-style: none;
 }
 
-*:focus {
-  outline: none;
-}
-
 p,
 h1,
 h2,
@@ -67,6 +63,7 @@ img {
 .page-header {
   background-color: var(--primary-white-color);
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 1;
 }
@@ -347,7 +344,8 @@ img {
   max-width: 1600px;
   height: 600px;
   margin: 0 auto;
-  padding-top: 281px;
+  margin-top: 80px;
+  padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
 
@@ -545,7 +543,7 @@ img {
   fill: currentColor;
   color: var(--icons-main-color);
 
-  transition: color,
+  transition: color, fill,
     background-color var(--animation-duration) var(--timing-function);
 }
 
@@ -635,6 +633,7 @@ img {
 
   transform: translatey(100%);
   transition: transform var(--animation-duration) var(--timing-function);
+  opacity: 0;
 }
 
 .overlay-text {
@@ -651,6 +650,7 @@ img {
 .projects-link:hover .projects-overlay,
 .projects-link:focus .projects-overlay {
   transform: translatey(0);
+  opacity: 1;
 }
 
 .projects-item-descript {
